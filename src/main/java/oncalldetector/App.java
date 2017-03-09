@@ -8,6 +8,11 @@ public class App
 
     public static void main(String[] args ) throws IOException, InterruptedException {
 
+        if(args.length != 1) {
+            printUsage();
+            return;
+        }
+
         String userName = args[0];
 
         MicrophoneDeviceOnCallDetector onCallDetector = new MicrophoneDeviceOnCallDetector();
@@ -24,6 +29,10 @@ public class App
 
         }
 
+    }
+
+    private static void printUsage() {
+        System.out.println("Usage: java -jar <app.jar> <userName>");
     }
 
 

@@ -8,7 +8,7 @@ class MicrophoneDeviceOnCallDetector {
     private boolean onCall;
 
     public boolean isOnCall() throws IOException {
-        String micDevice = "/dev/snd/pcmC0D0c";
+        String micDevice = "/dev/snd/pcmC0D0c"; // Microphone device
         String[] commands = {"fuser", micDevice};
 
         Process process = Runtime.getRuntime().exec(commands);
