@@ -8,14 +8,18 @@ public class App
 
     public static void main(String[] args ) throws IOException, InterruptedException {
 
-        if(args.length != 1) {
+        if(args.length < 1) {
             printUsage();
             return;
         }
 
         String userName = args[0];
+        String micDevice = null;
+        if (args.length > 1){
+            micDevice = args[1];
+        }
 
-        MicrophoneDeviceOnCallDetector onCallDetector = new MicrophoneDeviceOnCallDetector();
+        MicrophoneDeviceOnCallDetector onCallDetector = new MicrophoneDeviceOnCallDetector(micDevice);
         OnCallServer onCallServer = new OnCallServer();
 
         while(true) {
@@ -32,8 +36,6 @@ public class App
     }
 
     private static void printUsage() {
-        System.out.println("Usage: java -jar <app.jar> <userName>");
+        System.out.println("Usage: java -jar <app.jar> <userName> <micDevicePath>");
     }
-
-
 }
