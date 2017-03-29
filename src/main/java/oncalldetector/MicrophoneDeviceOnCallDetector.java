@@ -5,10 +5,13 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 class MicrophoneDeviceOnCallDetector {
-    private boolean onCall;
+    private String micDevice;
+
+    public MicrophoneDeviceOnCallDetector(String micDevice){
+        this.micDevice = micDevice != null? micDevice : "/dev/snd/pcmC0D0c";
+    }
 
     public boolean isOnCall() throws IOException {
-        String micDevice = "/dev/snd/pcmC0D0c"; // Microphone device
         String[] commands = {"fuser", micDevice};
 
         Process process = Runtime.getRuntime().exec(commands);
