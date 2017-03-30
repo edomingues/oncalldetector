@@ -9,9 +9,9 @@ class OnCallServer {
 
     private static final String HOST = "http://192.168.2.20";
 
-    public void setUserOnCall(String userName, boolean isOnCall) {
+    public void setUserOnCall(String userName) {
         Client client = ClientBuilder.newClient();
-        WebTarget target = client.target(HOST).path("script/SetUserOnCall").queryParam("userName", userName).queryParam("onCallState", isOnCall);
+        WebTarget target = client.target(HOST).path("script/SetUserOnCall").queryParam("userName", userName);
 
         Response response = target.request().get();
 

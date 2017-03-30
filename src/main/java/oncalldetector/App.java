@@ -24,10 +24,11 @@ public class App
 
         while(true) {
             boolean isOnCall = onCallDetector.isOnCall();
-
             System.out.println("isOnCall="+isOnCall);
 
-            onCallServer.setUserOnCall(userName, isOnCall);
+            if (isOnCall) {
+                onCallServer.setUserOnCall(userName);
+            }
 
             Thread.sleep(POLL_TIME);
 
