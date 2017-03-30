@@ -4,7 +4,7 @@ deploy:
   api_key:
     secure: KkhEk5z9JFVgh0/wAo19vY+p+kP39RULK84LHRleOaGg/DZsd0AI3dJW/v9UheEwlxTS7AqDO/H22VxV1CnD4pbl3QkZIWVnaPt7vI4/Qx7ECfFtpHg2f7GlLD3WQ8E1zlRMgX/cjODCsluqhOg4xw2IgGBDoz3mdNPGcz3WORISzlS8a6POLnJFg8xGDbogcYMDbIhXV5mOYQf0uUYeAlcSYoW8QFv01eEbL9+EUuivF/Xjekgj2caT7EF+PZrMAEAu6xvygE3hWp8pC2kBx92eHzXRMFkqQgcwxNedKGe+e8iQ/n7M9+Nt4NZGuH6CvJ4uGH4IOKLPD66d+CJXbTFnra/bfAGGDXc7ixcSxMQJYoo1p8pNPvGmnmpyDlwbREVLu7pqp5y75TneuKcDRE1SvFhi8Dxzxso0ofom+N8/LHt5R4U9zMiQ+NWFuBU6t73RQ/ubIK+KHaLC3n+nJaLoXNLZBBGLsregicsIv2XTclD6lKflnCfHkz6VKjA198+W6KOu5vf5mHRfZJ2+fBnRhrFXUp5OYBuM+SYRAAbBx90mHh7REKd3ImSBAOkLki4rRYgaZpxTEKX01rjfIuMe1/ztODwqUifVGKmoeVAlIjNhdPvC2PhixaWcxWVN6P7XgMDWmseVMSKAeEKKb45vZWAf8Xo7oCcA4TZ39XA=
   skip_cleanup: true
-  file: target/oncalldetector-1.2.0-SNAPSHOT-jar-with-dependencies.jar
+  file: target/oncalldetector-1.2.1-SNAPSHOT-jar-with-dependencies.jar
   on:
     repo: edomingues/oncalldetector
     tags: true
