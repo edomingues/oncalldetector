@@ -14,12 +14,12 @@ public class App
         }
 
         String userName = args[0];
-        String micDevice = null;
+        String devicePattern = null;
         if (args.length > 1){
-            micDevice = args[1];
+            devicePattern = args[1];
         }
 
-        MicrophoneDeviceOnCallDetector onCallDetector = new MicrophoneDeviceOnCallDetector(micDevice);
+        OnCallDetector onCallDetector = new MultipleCaptureDevicesOnCallDetector(devicePattern);
         OnCallServer onCallServer = new OnCallServer();
 
         while(true) {
@@ -37,6 +37,6 @@ public class App
     }
 
     private static void printUsage() {
-        System.out.println("Usage: java -jar <app.jar> <userName> <micDevicePath>");
+        System.out.println("Usage: java -jar <app.jar> <user name> <capture device pattern>");
     }
 }

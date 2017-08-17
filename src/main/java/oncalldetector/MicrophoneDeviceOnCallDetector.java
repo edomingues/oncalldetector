@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-class MicrophoneDeviceOnCallDetector {
+class MicrophoneDeviceOnCallDetector implements OnCallDetector {
     private String micDevice;
 
     public MicrophoneDeviceOnCallDetector(String micDevice){

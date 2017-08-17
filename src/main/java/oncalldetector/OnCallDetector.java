@@ -1,7 +1,7 @@
 package oncalldetector;
 
-/**
- * Created by edomingues on 8/17/17.
- */
+import java.io.IOException;
+
 public interface OnCallDetector {
+    boolean isOnCall() throws IOException;
 }
